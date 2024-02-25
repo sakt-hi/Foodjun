@@ -13,13 +13,13 @@ const Header = () => {
       <div className="logo-container">
         <img className='logo' src={logo} alt="ABHIRUCHI"/>
       </div>
-      <div className="nav-items">
+      <div className="nav-container">
         <ul className='nav-list'>
-          <li><IconSearch />Search</li>
-          <li><IconOffers />Offers</li>
-          <li><IconHelp /> Help</li>
-          <li><span className='cart-num'>0</span>Cart</li>
-          <li><IconUser /> Sakthivel G</li>
+          <li className='nav-item' ><IconSearch />Search</li>
+          <li className='nav-item'><IconOffers />Offers</li>
+          <li className='nav-item'><IconHelp /> Help</li>
+          <li className='nav-item'><span className='cart-num'>0</span>Cart</li>
+          <li className='nav-item'><IconUser /> Sakthivel G</li>
           <li>
             {/* Toggle button for switching between live and mock data */}
             <button className={`${useMockData ? 'mock-btn' :'live-btn' }`} onClick={toggleData}>

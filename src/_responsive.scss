@@ -1,0 +1,46 @@
+// _responsive.scss
+
+// Breakpoints for different devices
+$breakpoint-mobile: 480px;
+$breakpoint-tablet: 768px;
+$breakpoint-laptop-sm: 1024px;
+$breakpoint-laptop-lg: 1440px;
+$breakpoint-2k: 2048px;
+$breakpoint-4k: 2560px;
+
+// Define mixins for media queries with min-width and max-width
+@mixin respond-to-mobile {
+  @media (min-width: 0) and (max-width: #{($breakpoint-mobile - 1)}) {
+    @content;
+  }
+}
+
+@mixin respond-to-tablet {
+  @media (min-width: $breakpoint-tablet) and (max-width: #{($breakpoint-laptop-sm - 1)}) {
+    @content;
+  }
+}
+
+@mixin respond-to-laptop-sm {
+  @media (min-width: $breakpoint-laptop-sm) and (max-width: #{($breakpoint-laptop-lg - 1)}) {
+    @content;
+  }
+}
+
+@mixin respond-to-laptop-lg {
+  @media (min-width: $breakpoint-laptop-lg) and (max-width: #{($breakpoint-2k - 1)}) {
+    @content;
+  }
+}
+
+@mixin respond-to-2k {
+  @media (min-width: $breakpoint-2k) and (max-width: #{($breakpoint-4k - 1)}) {
+    @content;
+  }
+}
+
+@mixin respond-to-4k {
+  @media (min-width: $breakpoint-4k) {
+    @content;
+  }
+}

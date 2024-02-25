@@ -1,5 +1,5 @@
 @import "./shimmer";
-
+@import "./responsive";
 
 body,html,h1,h2,h3,h4,h5,h6,p,button{
     margin: 0;
@@ -73,6 +73,12 @@ $whiteGray: #f0f0f5;
                 border-radius: 2px;
             }
         }
+        .nav-item{
+          display: flex;
+          @include respond-to-mobile{
+            display: none;
+          }
+        }
         .live-btn{
             cursor: pointer;
             background-color: rgba(34, 139, 34, 0.15);
@@ -98,6 +104,9 @@ $whiteGray: #f0f0f5;
     .home-wrapper{
         width: 75%;
         height: 100%;
+        @include respond-to-mobile{
+          width: 80%;
+        }
     }
     .WOYM-container{
         padding: 30px 0px;
@@ -145,11 +154,15 @@ $whiteGray: #f0f0f5;
             display: flex;
             align-items: center;
             justify-content: space-between;
+            @include respond-to-mobile{
+              overflow-x: scroll;
+            }
             .filter-btn{
                 display: flex;
                 gap: 15px;
                 .facets-btn{
                     cursor: pointer;
+                    width: max-content;
                     background-color: white;
                     color: $gray;
                     border: 1px solid rgb(226, 226, 231);
@@ -199,6 +212,9 @@ $whiteGray: #f0f0f5;
                     background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.3), rgba(0,0,0,1));
                     display: flex;
                     align-items: flex-end;
+                    @include respond-to-mobile{
+                      width: 300px;
+                    }
                     p{
                         padding: 0.7rem;
                         color: #ffffff;
@@ -211,6 +227,9 @@ $whiteGray: #f0f0f5;
                     width: 245px;
                     height: 160px;
                     border-radius: 10px;
+                    @include respond-to-mobile{
+                      width: 300px;
+                    }
                 }   
             }
             
@@ -251,7 +270,9 @@ $whiteGray: #f0f0f5;
             flex-wrap: wrap;
             column-gap: 2.5%;
             row-gap: 30px;
-            
+            @include respond-to-mobile{
+              justify-content: space-between;
+            }
             .sg-btn{
                 cursor: pointer;
                 width: 245px;
@@ -267,6 +288,14 @@ $whiteGray: #f0f0f5;
                 overflow: hidden;
                 white-space: nowrap;
                 text-overflow: ellipsis;
+                @include respond-to-mobile{
+                  width: 160px;
+                  height: 100px;
+                  display: flex;
+                  align-items: center;
+                  white-space: wrap;
+                  justify-content: space-between
+                }
             }
             .show-more{
                 @extend .sg-btn;
@@ -335,16 +364,24 @@ $whiteGray: #f0f0f5;
 }
 
 .footer{
-    height: 120px;
+    height: auto;
     background-color: $black;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 4% 8%;
+    @include respond-to-mobile{
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
     .footer-logo{
       display: flex;
       flex-direction: column;
       gap: 16px;
+      @include respond-to-mobile{
+        padding: 3rem 0;
+      }
       img{
         width: 10rem;
       }
@@ -356,6 +393,12 @@ $whiteGray: #f0f0f5;
     .footer-links{
       display: flex;
       gap: 5rem;
+      @include respond-to-mobile{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 2rem;
+        row-gap: 2rem;
+      }
       h6{
         color: white;
         font-size: 18px;
