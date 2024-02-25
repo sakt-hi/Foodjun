@@ -104,6 +104,25 @@ $whiteGray: #f0f0f5;
         display: flex;
         flex-direction: column;
         gap: 20px;
+        .carousel-container{
+          display: flex;
+          justify-content: space-between;
+          .carsl-btn-container{
+            display: flex;
+            gap: 14px;
+            button{
+              background-color: #ddd;
+              border: none;
+              border-radius: 50%;
+              padding: 4px;
+              display: flex;
+              align-items: center;
+            }
+            .disabled{
+              background-color: #eee;
+            }
+          }
+        }
         .WOYM-item{
             display: flex !important;
             overflow-x: scroll;
@@ -320,6 +339,41 @@ $whiteGray: #f0f0f5;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0% 8%;
+    padding: 4% 8%;
+    .footer-logo{
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      img{
+        width: 10rem;
+      }
+      p{
+        color: $whiteGray;
+        font-size: 14px;
+      }
+    }
+    .footer-links{
+      display: flex;
+      gap: 5rem;
+      h6{
+        color: white;
+        font-size: 18px;
+        font-weight: 500;
+      }
+      ul { 
+        list-style:none; 
+        padding-left:0;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        margin-top: 20px;
+        li{
+          color: $whiteGray;
+          opacity: 0.8;
+          font-weight: 300;
+          font-size: 16px;
+        }
+      } 
+    }
 }
 

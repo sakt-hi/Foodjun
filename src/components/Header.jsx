@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../assets/logo.jpg'
+import logo from '../assets/foodjun_primary.svg'
 import IconSearch from '../assets/IconSearch'
 import IconOffers from '../assets/IconOffers'
 import IconHelp from '../assets/IconHelp'
